@@ -22,7 +22,7 @@ body {
 #menu {
     background: #fff;
     width: 255px;
-    height: 100vh;
+    height: 855px;
 }
 
 #menu .logo {
@@ -120,14 +120,14 @@ body {
     /* margin: 10px; */
 }
 
-.card {
+#interface .card {
     padding: 30px 30px 0 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.card .card-box {
+#interface .card .card-box {
     background: #fff;
     width: 260px;
     height: 135px;
@@ -138,25 +138,96 @@ body {
     padding: 30px 0;
 }
 
-.card .card-box:hover {
+#interface .card .card-box:hover {
     border: 1px solid var(--hover);
     cursor: pointer;
 }
 
-.card .card-box h4 {
+#interface .card .card-box h4 {
     margin-bottom: 1.2rem;
     color: #9FA2B4;
 }
 
-.card .card-box h4:hover {
+#interface .card .card-box h4:hover {
     color: var(--hover);
 }
 
-.card .card-box p {
+#interface .card .card-box p {
     font-size: xx-large;
     font-weight: bold;
 }
 
-.card .card-box p:hover {
+#interface .card .card-box p:hover {
     color: var(--hover);
+}
+
+#interface .content-data {
+    display: flex;
+}
+
+#interface .content-data .chart {
+    background: #fff;
+    width: 890px;
+    height: 546px;
+    padding: 130px 30px;
+    margin-left: 30px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+}
+
+#interface .content-data .quick-access {
+    width: 260px;
+    height: 300px;
+    margin-top: 30px;
+    margin-left: 55px;
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+}
+
+#interface .content-data .quick-access .tittle-quick {
+    height: 50px;
+    background: var(--hover);
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: 1px solid var(--hover);
+}
+
+#interface .content-data .quick-access .tittle-quick i {
+    margin-right: 15px;
+}
+
+#interface .content-data .quick-access .item-quick {
+    background: transparent;
+    border-radius: 8px;
+    color: #9FA2B4;
+    text-align: left;
+    padding: 10px;
+
+}
+
+#interface .content-data .quick-access .item-quick li {
+    height: 50px;
+    width: 260px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 30px;
+    /* margin-top: 5px; */
+}
+
+#interface .content-data .quick-access .item-quick i {
+    /* margin-top: 5px; */
+    /* font-size: 16px; */
+}
+
+#interface .content-data .quick-access .item-quick a {
+    text-decoration: none;
+    color: #9FA2B4;
+    font-size: 16px;
+    margin-left: 20px;
 }

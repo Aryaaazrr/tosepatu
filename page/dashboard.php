@@ -19,6 +19,8 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <!-- Link auth line chart -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
 
     <body>
@@ -75,7 +77,69 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
                     <p>50</p>
                 </div>
             </div>
+
+            <div class="content-data">
+
+                <div class="chart">
+                    <canvas id="myChart"></canvas>
+                </div>
+    
+                <div class="quick-access">
+                    <div class="tittle-quick">
+                        <i class="fa-solid fa-store"></i>
+                        <h4>Quick Access</h4>
+                    </div>
+                    <div class="item-quick">
+                        <li><i class="fa-regular fa-square-plus"></i><a href="#">Tambah Produk</a></li>
+                        <li><i class="fa-regular fa-arrow-up-right-from-square"></i><a href="#">Buat Pesanan</a></li>
+                        <li><i class="fa-regular fa-grid-2-plus"></i><a href="#">Metode Pengiriman</a></li>
+                        <li><i class="fa-regular fa-grid-2-plus"></i><a href="#">Jam Operasional</a></li>
+                        <li><i class="fa-regular fa-grid-2-plus"></i><a href="#">Metode Pembayaran</a></li>
+                    </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <!-- Line Chart -->
+        <script>
+            const labels = [
+                'January',
+                'February',
+                'March',
+                'April',
+                'May',
+                'June',
+                'July',
+                'Agustus',
+                'September',
+                'Oktober',
+                'November',
+                'Desember',
+            ];
+
+            const data = {
+                labels: labels,
+                datasets: [{
+                    label: 'Sekarang',
+                    backgroundColor: '#5FD3D0',
+                    borderColor: '#5FD3D0',
+                    data: [23, 10, 5, 2, 20, 30, 45, 90, 79, 65, 43, 21],
+                }]
+            };
+
+            const config = {
+                type: 'line',
+                data: data,
+                options: {}
+            };
+
+            const myChart = new Chart(
+                document.getElementById('myChart'),
+                config
+            );
+        </script>
+
     </body>
 
     </html>
