@@ -47,9 +47,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['user_email'])) {
                 </div>
                 <div class="profile">
                     <i class="fa-solid fa-bell"></i>
-                    <!-- <i class="fa-solid fa-pipe"></i> -->
-                    <!-- <i class="fa-duotone fa-pipe"></i> -->
-                    <img src="../landing-page/img/divider.png" alt="divider" height="550px">
+                    <!-- <img src="../landing-page/img/divider.png" alt="divider" height="550px"> -->
                     <h4>
                         <?php
                         echo $_SESSION['user_username'];
