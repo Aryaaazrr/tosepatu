@@ -11,7 +11,7 @@ if (isset($_SESSION['user'])) {
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login - Anda Untung Kami Berkah</title>
+    <title>Login | TOSEPATU - Anda Untung Kami Berkah</title>
     <link rel="stylesheet" type="text/css" href="../asset/css/log-page.css">
     <!-- Icon -->
     <link rel='shortcut icon' href='../asset/img/icon-tab.jpg'>
