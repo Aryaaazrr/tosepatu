@@ -18,3 +18,5 @@ $cid = $data['id_akun'];
 $cname = $data['username'];
 $pass = $data['password'];
 $cverified = $data['verified'];
+
+$fname = strtok($cname, " ");
