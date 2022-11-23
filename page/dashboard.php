@@ -105,17 +105,30 @@ require_once '../asset/php/session.php';
                     </div>
                 </div>
 
-                <div class="quick-access">
-                    <div class="tittle-quick">
-                        <i class="fa-solid fa-store"></i>
-                        <h4>Quick Access</h4>
+                <div class="content-right">
+                    <div class="quick-access">
+                        <div class="tittle-quick">
+                            <i class="fa-solid fa-store"></i>
+                            <h4>Quick Access</h4>
+                        </div>
+                        <div class="item-quick">
+                            <li><i class="fa-solid fa-square-plus"></i><a href="#">Tambah Produk</a></li>
+                            <li><i class="fa-sharp fa-solid fa-cart-plus"></i><a href="#">Buat Pesanan</a></li>
+                        </div>
                     </div>
-                    <div class="item-quick">
-                        <li><i class="fa-regular fa-square-plus"></i><a href="#">Tambah Produk</a></li>
-                        <li><i class="fa-regular fa-arrow-up-right-from-square"></i><a href="#">Buat Pesanan</a></li>
-                        <li><i class="fa-regular fa-grid-2-plus"></i><a href="#">Metode Pengiriman</a></li>
-                        <li><i class="fa-regular fa-grid-2-plus"></i><a href="#">Jam Operasional</a></li>
-                        <li><i class="fa-regular fa-grid-2-plus"></i><a href="#">Metode Pembayaran</a></li>
+
+                    <div class="status-karyawan">
+                        <div class="tittle-status">
+                            <i class="fa-solid fa-user-check"></i>
+                            <h4>Status Karyawan</h4>
+                        </div>
+                        <div class="item-status">
+                            <li><a href="#">Achmad Zakariya</a><i class="fa-solid fa-circle-check"></i></li>
+                            <li><a href="#">A. Maulana Subandrio</a><i class="fa-solid fa-circle-check"></i></li>
+                            <li><a href="#">Refyan Gigas</a><i class="fa-solid fa-circle-check"></i></li>
+                            <li><a href="#">Daffa Fauzi</a><i class="fa-solid fa-circle-check"></i></li>
+                            <li><a href="#">Akbar Kusnandi</a><i class="fa-solid fa-circle-check"></i></li>
+                        </div>
                     </div>
                 </div>
             </div>

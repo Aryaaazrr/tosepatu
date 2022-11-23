@@ -23,7 +23,7 @@ body {
 #menu {
     background: #fff;
     width: 255px;
-    height: 855px;
+    height: 755px;
 }
 
 #menu .logo {
@@ -214,30 +214,31 @@ body {
 #interface .content-data .chart {
     background: #fff;
     width: 850px;
-    height: 500px;
+    height: 480px;
     padding: 30px 30px;
     margin-left: 30px;
     margin-top: 30px;
-    margin-bottom: 50px;
+    /* margin-bottom: 30px; */
     border: 1px solid #DFE0EB;
     border-radius: 8px;
 }
 
 #interface .content-data .chart .cont-chart {
-    height: 400px;
+    height: 380px;
     margin-top: 1.6rem;
 }
 
-#interface .content-data .quick-access {
+#interface .content-data .content-right .quick-access {
     width: 260px;
-    height: 300px;
+    height: 150px;
     margin-top: 30px;
     margin-left: 35px;
     border: 1px solid #DFE0EB;
     border-radius: 8px;
+    background-color: #fff;
 }
 
-#interface .content-data .quick-access .tittle-quick {
+#interface .content-data .content-right .quick-access .tittle-quick {
     height: 50px;
     background: var(--hover);
     border: 1px solid #DFE0EB;
@@ -249,36 +250,112 @@ body {
     border: 1px solid var(--hover);
 }
 
-#interface .content-data .quick-access .tittle-quick i {
+#interface .content-data .content-right .quick-access .tittle-quick i {
     margin-right: 15px;
 }
 
-#interface .content-data .quick-access .item-quick {
+#interface .content-data .content-right .quick-access .item-quick {
     background: transparent;
     border-radius: 8px;
     color: #9FA2B4;
     text-align: left;
-    padding: 10px;
-
+    /* padding: 10px; */
 }
 
-#interface .content-data .quick-access .item-quick li {
+#interface .content-data .content-right .quick-access .item-quick li {
     height: 50px;
-    width: 260px;
     display: flex;
     justify-content: flex-start;
-    margin-left: 30px;
-    /* margin-top: 5px; */
 }
 
-#interface .content-data .quick-access .item-quick i {
-    /* margin-top: 5px; */
-    /* font-size: 16px; */
+#interface .content-data .content-right .quick-access .item-quick li i {
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-#interface .content-data .quick-access .item-quick a {
+#interface .content-data .content-right .quick-access .item-quick li a {
     text-decoration: none;
     color: #9FA2B4;
     font-size: 16px;
     margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#interface .content-data .content-right .quick-access .item-quick li:hover i,
+#interface .content-data .content-right .quick-access .item-quick li:hover a {
+    color: var(--hover);
+}
+
+#interface .content-data .content-right .quick-access .item-quick li:hover {
+    background: rgba(159, 162, 180, 8%);
+    cursor: pointer;
+}
+
+#interface .content-data .content-right .status-karyawan {
+    width: 260px;
+    height: 300px;
+    margin-top: 30px;
+    margin-left: 35px;
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+    background-color: #fff;
+    flex-direction: column;
+}
+
+#interface .content-data .status-karyawan .tittle-status {
+    height: 50px;
+    background: var(--hover);
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    border: 1px solid var(--hover);
+}
+
+#interface .content-data .status-karyawan .tittle-status i {
+    margin-right: 15px;
+}
+
+#interface .content-data .status-karyawan .item-status {
+    background: transparent;
+    border-radius: 8px;
+    color: #9FA2B4;
+    text-align: left;
+}
+
+#interface .content-data .status-karyawan .item-status li {
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    cursor: pointer;
+}
+
+#interface .content-data .status-karyawan .item-status li i {
+    margin-left: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #6FF264;
+}
+
+#interface .content-data .status-karyawan .item-status li a {
+    text-decoration: none;
+    color: #9FA2B4;
+    font-size: 16px;
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#interface .content-data .status-karyawan .item-status li:hover a {
+    color: var(--hover);
+}
+
+#interface .content-data .status-karyawan .item-status li:hover {
+    background: rgba(159, 162, 180, 8%);
+    cursor: pointer;
 }
