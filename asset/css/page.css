@@ -113,7 +113,7 @@ body {
     font-size: 14px;
 }
 
-#interface .navigation .profile img {
+#interface .navigation .profile .photo {
     width: 40px;
     height: 40px;
     object-fit: cover;
@@ -121,7 +121,7 @@ body {
     /* margin: 10px; */
 }
 
-#interface .navigation .profile img:hover {
+#interface .navigation .profile .photo:hover {
     background-color: var(--hover);
     box-shadow: 0 0 20px var(--hover);
 }
@@ -142,7 +142,7 @@ body {
     position: absolute;
     right: 0;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 180px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
@@ -155,7 +155,8 @@ body {
 }
 
 #interface .navigation .profile .dropdown-content a:hover {
-    background-color: var(--hover);
+    background: rgba(159, 162, 180, 8%);
+    cursor: pointer;
 }
 
 #interface .navigation .profile .dropdown:hover .dropdown-content {
