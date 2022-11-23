@@ -166,16 +166,22 @@ body {
     display: flex;
 }
 
+
 #interface .content-data .chart {
     background: #fff;
     width: 890px;
-    height: 546px;
-    padding: 130px 30px;
+    height: 500px;
+    padding: 30px 30px;
     margin-left: 30px;
     margin-top: 30px;
     margin-bottom: 50px;
     border: 1px solid #DFE0EB;
     border-radius: 8px;
+}
+
+#interface .content-data .chart .cont-chart {
+    height: 400px;
+    margin-top: 1.6rem;
 }
 
 #interface .content-data .quick-access {

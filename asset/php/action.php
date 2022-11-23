@@ -1,6 +1,5 @@
 <?php
 session_start();
-include '../../funct-random-code.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
