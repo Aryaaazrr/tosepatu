@@ -121,22 +121,66 @@ body {
     /* margin: 10px; */
 }
 
+#interface .navigation .profile img:hover {
+    background-color: var(--hover);
+    box-shadow: 0 0 20px var(--hover);
+}
+
+#interface .navigation .profile .dropbtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#interface .navigation .profile .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+#interface .navigation .profile .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+#interface .navigation .profile .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#interface .navigation .profile .dropdown-content a:hover {
+    background-color: var(--hover);
+}
+
+#interface .navigation .profile .dropdown:hover .dropdown-content {
+    display: block;
+}
+
 #interface .card {
     padding: 30px 30px 0 30px;
     display: flex;
     align-items: center;
+    width: 100%;
     justify-content: space-between;
 }
 
 #interface .card .card-box {
     background: #fff;
-    width: 260px;
     height: 135px;
+    width: 260px;
+    /* margin-right: 5px; */
     border: 1px solid #DFE0EB;
     border-radius: 8px;
     text-align: center;
     align-content: center;
     padding: 30px 0;
+    position: relative;
 }
 
 #interface .card .card-box:hover {
@@ -169,7 +213,7 @@ body {
 
 #interface .content-data .chart {
     background: #fff;
-    width: 890px;
+    width: 850px;
     height: 500px;
     padding: 30px 30px;
     margin-left: 30px;
@@ -188,7 +232,7 @@ body {
     width: 260px;
     height: 300px;
     margin-top: 30px;
-    margin-left: 55px;
+    margin-left: 35px;
     border: 1px solid #DFE0EB;
     border-radius: 8px;
 }

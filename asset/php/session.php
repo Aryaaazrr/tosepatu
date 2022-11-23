@@ -13,3 +13,8 @@ $cemail = $_SESSION['user'];
 
 $data = $cuser->currentUser($cemail);
 // $dataN = $cuser->currentUser($cuserName);
+
+$cid = $data['id_akun'];
+$cname = $data['username'];
+$pass = $data['password'];
+$cverified = $data['verified'];

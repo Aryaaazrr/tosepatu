@@ -13,7 +13,7 @@ require_once '../asset/php/session.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda - Anda Untung Kami Berkah</title>
+    <title><?= ucfirst(basename($_SERVER['PHP_SELF'], '.php')); ?> | Anda Untung Kami Berkah</title>
     <!-- Icon -->
     <link rel='shortcut icon' href='../asset/img/icon-tab.jpg'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -38,7 +38,6 @@ require_once '../asset/php/session.php';
             <li><i class="fa-solid fa-users"></i><a href="#">Kelola Tim</a></li>
             <li><i class="fa-solid fa-book"></i><a href="#">Laporan</a></li>
             <li><i class="fa-solid fa-gear"></i><a href="#">Pengaturan</a></li>
-            <a href="../asset/php/logout.php">Logout</a>
         </div>
     </section>
     <section id="interface">
@@ -53,66 +52,73 @@ require_once '../asset/php/session.php';
                 <!-- <img src="../landing-page/img/divider.png" alt="divider" height="550px"> -->
                 <h4>
                     <?php
-                    echo $_SESSION['user'];
+                    echo $cname;
                     ?>
                 </h4>
-                <img src="../asset/img/icon-tab.jpg" alt="Foto Profile">
+                <div class="dropdown" style="float:right">
+                    <button class="dropbtn">
+                        <img src="../asset/img/icon-tab.jpg" alt="Foto Profile">
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Pengaturan</a>
+                        <a href="../asset/php/logout.php">Keluar</a>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="card">
-            <div class="card-box">
-                <h4>Jumlah Produk</h4>
-                <p>2</p>
+            <div class="card">
+                <div class="card-box">
+                    <h4>Jumlah Produk</h4>
+                    <p>2</p>
+                </div>
+                <div class="card-box">
+                    <h4>Toko Dilihat</h4>
+                    <p>200</p>
+                </div>
+                <div class="card-box">
+                    <h4>Dalam Proses</h4>
+                    <p>209</p>
+                </div>
+                <div class="card-box">
+                    <h4>Total Pesanan</h4>
+                    <p>50</p>
+                </div>
             </div>
-            <div class="card-box">
-                <h4>Toko Dilihat</h4>
-                <p>200</p>
-            </div>
-            <div class="card-box">
-                <h4>Dalam Proses</h4>
-                <p>209</p>
-            </div>
-            <div class="card-box">
-                <h4>Total Pesanan</h4>
-                <p>50</p>
-            </div>
-        </div>
 
-        <div class="content-data">
+            <div class="content-data">
 
-            <!-- <div class="chart">
+                <!-- <div class="chart">
                 <canvas id="myChart"></canvas>
             </div> -->
 
-            <div class="chart">
-                <div class="card-header">
-                    <h4>Bulan Ini</h4>
-                    <p>
-                        <!-- <i class="fa fa-arrow-up text-success"></i> -->
-                        <!-- <span class="font-weight-bold">4% more</span> -->
-                         13 Oktober 2022
-                    </p>
+                <div class="chart">
+                    <div class="card-header">
+                        <h4>Bulan Ini</h4>
+                        <p>
+                            <!-- <i class="fa fa-arrow-up text-success"></i> -->
+                            <!-- <span class="font-weight-bold">4% more</span> -->
+                            13 Oktober 2022
+                        </p>
+                    </div>
+                    <div class="cont-chart">
+                        <canvas id="chart-line" class="chart-canvas"></canvas>
+                    </div>
                 </div>
-                <div class="cont-chart">
-                    <canvas id="chart-line" class="chart-canvas"></canvas>
-                </div>
-            </div>
 
-            <div class="quick-access">
-                <div class="tittle-quick">
-                    <i class="fa-solid fa-store"></i>
-                    <h4>Quick Access</h4>
-                </div>
-                <div class="item-quick">
-                    <li><i class="fa-regular fa-square-plus"></i><a href="#">Tambah Produk</a></li>
-                    <li><i class="fa-regular fa-arrow-up-right-from-square"></i><a href="#">Buat Pesanan</a></li>
-                    <li><i class="fa-regular fa-grid-2-plus"></i><a href="#">Metode Pengiriman</a></li>
-                    <li><i class="fa-regular fa-grid-2-plus"></i><a href="#">Jam Operasional</a></li>
-                    <li><i class="fa-regular fa-grid-2-plus"></i><a href="#">Metode Pembayaran</a></li>
+                <div class="quick-access">
+                    <div class="tittle-quick">
+                        <i class="fa-solid fa-store"></i>
+                        <h4>Quick Access</h4>
+                    </div>
+                    <div class="item-quick">
+                        <li><i class="fa-regular fa-square-plus"></i><a href="#">Tambah Produk</a></li>
+                        <li><i class="fa-regular fa-arrow-up-right-from-square"></i><a href="#">Buat Pesanan</a></li>
+                        <li><i class="fa-regular fa-grid-2-plus"></i><a href="#">Metode Pengiriman</a></li>
+                        <li><i class="fa-regular fa-grid-2-plus"></i><a href="#">Jam Operasional</a></li>
+                        <li><i class="fa-regular fa-grid-2-plus"></i><a href="#">Metode Pembayaran</a></li>
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
 
         <div class="row mt-4">
