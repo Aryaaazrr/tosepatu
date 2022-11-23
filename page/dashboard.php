@@ -13,7 +13,7 @@ require_once '../asset/php/session.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= ucfirst(basename($_SERVER['PHP_SELF'], '.php')); ?> | Anda Untung Kami Berkah</title>
+    <title><?= ucfirst(basename($_SERVER['PHP_SELF'], '.php')); ?> | TOSEPATU - Anda Untung Kami Berkah</title>
     <!-- Icon -->
     <link rel='shortcut icon' href='../asset/img/icon-tab.jpg'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -32,12 +32,12 @@ require_once '../asset/php/session.php';
             <h2>TOSEPATU.KC</h2>
         </div>
         <div class="item">
-            <li><i class="fa-solid fa-chart-pie"></i><a href="#">Beranda</a></li>
-            <li><i class="fa-solid fa-ticket"></i><a href="#">Pesanan</a></li>
-            <li><i class="fa-solid fa-lightbulb"></i><a href="#">Pelanggan</a></li>
-            <li><i class="fa-solid fa-users"></i><a href="#">Kelola Tim</a></li>
-            <li><i class="fa-solid fa-book"></i><a href="#">Laporan</a></li>
-            <li><i class="fa-solid fa-gear"></i><a href="#">Pengaturan</a></li>
+            <li><i class="fa-solid fa-chart-pie"></i><a href="dashboard.php" <?= (basename($_SERVER['PHP_SELF']) == "dashboard.php") ? "active" : ""; ?>>Beranda</a></li>
+            <li><i class="fa-solid fa-ticket"></i><a href="pesanan.php" <?= (basename($_SERVER['PHP_SELF']) == "pesanan.php") ? "active" : ""; ?>>Pesanan</a></li>
+            <li><i class="fa-solid fa-lightbulb"></i><a href="pelanggan.php" <?= (basename($_SERVER['PHP_SELF']) == "pelanggan.php") ? "active" : ""; ?>>Pelanggan</a></li>
+            <li><i class="fa-solid fa-users"></i><a href="tim.php" <?= (basename($_SERVER['PHP_SELF']) == "tim.php") ? "active" : ""; ?>>Kelola Tim</a></li>
+            <li><i class="fa-solid fa-book"></i><a href="laporan.php" <?= (basename($_SERVER['PHP_SELF']) == "laporan.php") ? "active" : ""; ?>>Laporan</a></li>
+            <li><i class="fa-solid fa-gear"></i><a href="pengaturan.php" <?= (basename($_SERVER['PHP_SELF']) == "pengaturan.php") ? "active" : ""; ?>>Pengaturan</a></li>
         </div>
     </section>
     <section id="interface">
@@ -49,19 +49,21 @@ require_once '../asset/php/session.php';
             </div>
             <div class="profile">
                 <i class="fa-solid fa-bell"></i>
-                <!-- <img src="../landing-page/img/divider.png" alt="divider" height="550px"> -->
+                <img src="../asset/img/divider.png" alt="vertical line">
+
+                <!-- <i class="fa-light fa-pipe"></i> -->
                 <h4>
                     <?php
-                    echo $cname;
+                    echo $fname;
                     ?>
                 </h4>
                 <div class="dropdown" style="float:right">
                     <button class="dropbtn">
-                        <img src="../asset/img/icon-tab.jpg" alt="Foto Profile">
+                        <img class="photo" src="../asset/img/icon-tab.jpg" alt="Foto Profile">
                     </button>
                     <div class="dropdown-content">
-                        <a href="#">Pengaturan</a>
-                        <a href="../asset/php/logout.php">Keluar</a>
+                        <a href="pengaturan.php"><i class="fa-solid fa-gear"></i>&nbsp;Pengaturan</a>
+                        <a href="../asset/php/logout.php"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;Keluar</a>
                     </div>
                 </div>
             </div>
