@@ -23,7 +23,7 @@ body {
 #menu {
     background: #fff;
     width: 255px;
-    height: 755px;
+    min-height: 100vh;
 }
 
 #menu .logo {
@@ -51,7 +51,8 @@ body {
     padding: 15px;
 }
 
-#menu .item li:hover {
+#menu .item li:hover,
+.nav-active {
     background: rgba(159, 162, 180, 8%);
     cursor: pointer;
 }
@@ -292,6 +293,117 @@ body {
 #interface .content-data .content-right .quick-access .item-quick li:hover {
     background: rgba(159, 162, 180, 8%);
     cursor: pointer;
+}
+
+#interface .content-data .content-right .quick-access .item-quick .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+#interface .content-data .content-right .quick-access .item-quick .overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+#interface .content-data .content-right .quick-access .item-quick .overlay .popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+#interface .content-data .content-right .quick-access .item-quick .overlay .popup h2 {
+    margin: 7px auto;
+    color: #333;
+}
+
+#interface .content-data .content-right .quick-access .item-quick .overlay .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+#interface .content-data .content-right .quick-access .item-quick .overlay .popup .close:hover {
+    color: var(--hover);
+}
+
+#interface .content-data .content-right .quick-access .item-quick .overlay .popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+#interface .content-data .content-right .quick-access .item-quick .overlay .popup .form-produk {
+    margin-top: 10px;
+}
+
+#interface .content-data .content-right .quick-access .item-quick .overlay .popup .form-produk form input {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #FCFDFE;
+    border: 2px solid #F0F1F7;
+}
+
+#interface .content-data .content-right .quick-access .item-quick .overlay .popup .form-produk form input[type=text]:focus {
+    border: 2px solid var(--hover);
+    box-shadow: 0 0 2px var(--hover);
+    outline: none;
+}
+
+#interface .content-data .content-right .quick-access .item-quick .overlay .popup .form-produk form button {
+    background: var(--hover);
+    color: #fff;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px;
+    width: 100%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#interface .content-data .content-right .quick-access .item-quick .overlay .popup .form-produk form button:hover {
+    color: #fff;
+    background-color: var(--hover);
+    box-shadow: 0 0 20px var(--hover);
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #9FA2B4;
+    font-size: 14px;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    font-size: 14px;
+    color: #9FA2B4;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    font-size: 14px;
+    color: #9FA2B4;
 }
 
 #interface .content-data .content-right .status-karyawan {

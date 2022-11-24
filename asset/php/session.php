@@ -4,7 +4,7 @@ require_once 'auth.php';
 $cuser = new Auth();
 
 if (!isset($_SESSION['user'])) {
-    header('location: login.php');
+    header('location: masuk.php');
     die;
 }
 
@@ -17,6 +17,6 @@ $data = $cuser->currentUser($cemail);
 $cid = $data['id_akun'];
 $cname = $data['username'];
 $pass = $data['password'];
-$cverified = $data['verified'];
+$cphoto = $data['foto'];
 
 $fname = strtok($cname, " ");
