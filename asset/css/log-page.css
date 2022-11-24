@@ -57,12 +57,14 @@ body {
 
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: #4B506D;
+    color: #9FA2B4;
+    font-size: 14px;
 }
 
 ::-ms-input-placeholder {
     /* Microsoft Edge */
-    color: var(--hover);
+    color: #9FA2B4;
+    font-size: 14px;
 }
 
 .login input[type=text]:focus {
