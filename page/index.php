@@ -1,3 +1,10 @@
+<?php
+include_once '../asset/php/config/config.php';
+$db = new Database();
+$sql = "UPDATE pengunjung SET hits = hits + 1 WHERE id_pengunjung = 0";
+$stmt = $db->conn->prepare($sql);
+$stmt->execute();
+?>
 <!DOCTYPE html>
 <html lang="en" id="#">
 
@@ -35,7 +42,7 @@
       <a href="#layanan">Layanan</a>
       <a href="#carakerja">Cara Kerja</a>
       <a href="#mobileapp" class="nav-link">Unduh Aplikasi Seluler</a>
-      <a href="login.php" class="btn">Masuk</a>
+      <a href="masuk.php" class="btn">Masuk</a>
     </nav>
   </header>
   <!-- Akhir Header -->
