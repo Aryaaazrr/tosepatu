@@ -1,9 +1,13 @@
 <?php
-include_once '../asset/php/config/config.php';
+include_once '../../admin/asset/php/config/config.php';
 $db = new Database();
 $sql = "UPDATE pengunjung SET hits = hits + 1 WHERE id_pengunjung = 0";
 $stmt = $db->conn->prepare($sql);
 $stmt->execute();
+session_start();
+if (isset($_SESSION['userAdmin'])) {
+    header('Location: ../../admin/page/beranda.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en" id="#">
@@ -18,10 +22,10 @@ $stmt->execute();
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 
   <!-- Link eksternal file CSS -->
-  <link rel="stylesheet" href="../asset/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
 
   <!-- Icon -->
-  <link rel="shortcut icon" href="../asset/img/icon-tab.jpg" />
+  <link rel="shortcut icon" href="../assets/img/icon-tab.jpg" />
 
   <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,7 +38,7 @@ $stmt->execute();
   <!-- Awal Header -->
   <header>
     <a href="#" class="logo">
-      <img src="../asset/img/Logo_ToSepatu_no_bg.png" alt="Logo Tosepatu" height="100px" />
+      <img src="../assets/img/Logo_ToSepatu_no_bg.png" alt="Logo Tosepatu" height="100px" />
     </a>
     <div id="menu-bar" class="fas fa-bars"></div>
     <nav class="navbar">
@@ -59,7 +63,7 @@ $stmt->execute();
       <a href="#mobileapp" class="btn">Pesan Sekarang</a>
     </div>
     <div class="image">
-      <img src="../asset/img/new-pair-white-sneakers-isolated-white 1 (1).png" alt="White Sneakers" />
+      <img src="../assets//img/new-pair-white-sneakers-isolated-white 1 (1).png" alt="White Sneakers" />
     </div>
   </section>
   <!-- Akhir Home Section -->
@@ -81,19 +85,19 @@ $stmt->execute();
       </div>
       <div class="box">
         <div class="box-content">
-          <img src="../asset/img/box-1.png" alt="box-1" height="200px" width="180px" />
+          <img src="../assets//img/box-1.png" alt="box-1" height="200px" width="180px" />
           <h5>Vitae at enim consectetur amet venenatis ac.</h5>
         </div>
       </div>
       <div class="box-center">
         <div class="box-content">
-          <img src="../asset/img/box-2.png" alt="box-2" height="200px" width="168px" />
+          <img src="../assets//img/box-2.png" alt="box-2" height="200px" width="168px" />
           <h5>Laoreet adipiscing vehicula eget justo eros purus.</h5>
         </div>
       </div>
       <div class="box">
         <div class="box-content">
-          <img src="../asset/img/box-3.png" alt="box-3" height="200px" width="180px" />
+          <img src="../assets//img/box-3.png" alt="box-3" height="200px" width="180px" />
           <h5>Amet urna quis dictum est sed egestas rutrum.</h5>
         </div>
       </div>
@@ -105,7 +109,7 @@ $stmt->execute();
   <section class="layanan" id="layanan">
     <div class="deepclean1">
       <div class="pic-component">
-        <img src="../asset/img/layanan-1.png" alt="deepclean" />
+        <img src="../assets//img/layanan-1.png" alt="deepclean" />
       </div>
       <div class="component">
         <h5>Layanan 1</h5>
@@ -130,7 +134,7 @@ $stmt->execute();
         <a href="#" class="btn">Baca Selengkapnya</a>
       </div>
       <div class="pic-component">
-        <img src="../asset/img/layanan-2.png" alt="deepclean+sepatuputih" />
+        <img src="../assets//img/layanan-2.png" alt="deepclean+sepatuputih" />
       </div>
     </div>
   </section>
@@ -172,14 +176,14 @@ $stmt->execute();
       </div>
     </div>
     <div class="image-step">
-      <img src="../asset/img/cara-kerja.png" alt="cara-kerja" />
+      <img src="../assets//img/cara-kerja.png" alt="cara-kerja" />
     </div>
   </section>
   <!-- Akhir Cara Kerja -->
 
   <!-- Awal mobile app -->
   <div class="mobileapp" id="mobileapp">
-    <img src="../asset/img/mobile.png" alt="mobileapp" />
+    <img src="../assets//img/mobile.png" alt="mobileapp" />
     <div class="content">
       <h3>Unduh aplikasi ini</h3>
       <p>
@@ -193,10 +197,10 @@ $stmt->execute();
         vel vestibulum at consectetur justo aliquet a.
       </p>
       <a href="#" title="Download Aplikasi Di PlayStore">
-        <img src="../asset/img/google-play-store.png" alt="playstore" class="android" />
+        <img src="../assets//img/google-play-store.png" alt="playstore" class="android" />
       </a>
       <a href="#" title="Download Aplikasi Di App Store">
-        <img src="../asset/img/app-store.png" alt="app-store" class="iphone" />
+        <img src="../assets//img/app-store.png" alt="app-store" class="iphone" />
       </a>
     </div>
   </div>
@@ -205,7 +209,7 @@ $stmt->execute();
   <!-- Awal footer -->
   <footer class="footer" id="footer">
     <div class="terakhir">
-      <img src="../asset/img/icon-tab.jpg" alt="logo" />
+      <img src="../assets//img/icon-tab.jpg" alt="logo" />
       <div class="social-media">
         <h5>Sosial Media</h5>
         <a href="https://wa.me/message/TJHCXV2IHL45I1" target="_blank">WhatsApp</a>
@@ -228,7 +232,7 @@ $stmt->execute();
   <!-- Akhir footer -->
 
   <!-- Link eksternal file JS -->
-  <script src="../asset/js/script.js"></script>
+  <script src="../assets/js/script.js"></script>
 </body>
 
 </html>

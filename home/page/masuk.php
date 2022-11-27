@@ -1,8 +1,9 @@
 <?php
 session_start();
-if (isset($_SESSION['user'])) {
-    header('Location: beranda.php');
+if (isset($_SESSION['userAdmin'])) {
+    header('Location: ../../admin/page/beranda.php');
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -12,9 +13,9 @@ if (isset($_SESSION['user'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Masuk | TOSEPATU - Anda Untung Kami Berkah</title>
-    <link rel="stylesheet" type="text/css" href="../asset/css/log-page.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/log-page.css">
     <!-- Icon -->
-    <link rel='shortcut icon' href='../asset/img/icon-tab.jpg'>
+    <link rel='shortcut icon' href='../assets/img/icon-tab.jpg'>
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +23,9 @@ if (isset($_SESSION['user'])) {
 </head>
 
 <body>
-    <div class="login">
-        <form action="#" method="post" id="login-form">
-            <img src="../asset/img/Logo_ToSepatu_no_bg.png" alt="Logo Tosepatu" width="150px">
+    <div class="container">
+        <form action="#" method="post" id="login-form" class="login">
+            <img src="../assets/img/Logo_ToSepatu_no_bg.png" alt="Logo Tosepatu" width="150px">
             <h2>Masuk</h2>
             <p>Masukkan email dan kata sandi anda di bawah ini</p>
             <div id="logAlert"></div>
@@ -37,6 +38,9 @@ if (isset($_SESSION['user'])) {
             <br>
 
             <button type="submit" id="login-btn">Masuk</button>
+            <div class="btn-cancel">
+                <a href="daftar.php">Daftar Akun</a>
+            </div>
         </form>
     </div>
 
@@ -49,12 +53,14 @@ if (isset($_SESSION['user'])) {
                 if ($("#login-form")[0].checkValidity()) {
                     e.preventDefault();
                     $.ajax({
-                        url: '../asset/php/action.php',
+                        url: '../../admin/asset/php/action.php',
                         method: 'post',
                         data: $("#login-form").serialize() + '&action=login',
                         success: function(response) {
-                            if (response === 'login') {
-                                window.location = 'beranda.php';
+                            if (response === 'loginAdmin') {
+                                window.location = '../../admin/page/beranda.php';
+                            } else if (response === 'loginUser'){
+                                window.location = '../../karyawan/page/beranda-karyawan.php';
                             } else {
                                 $("#logAlert").html(response);
                             }

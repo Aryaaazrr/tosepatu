@@ -8,7 +8,6 @@ body {
     height: 100vh;
     flex-direction: column;
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 * {
@@ -21,9 +20,27 @@ body {
     --hover: #5FD3D0;
 }
 
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* layout start form */
+.register {
+    width: 380px;
+    /* max-height: 680px; */
+    max-height: 750px;
+    padding: 1.2rem;
+    background: #fff;
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+}
+
 .login {
     width: 380px;
-    height: 580px;
+    max-height: 600px;
     padding: 1.2rem;
     background: #fff;
     border: 1px solid #DFE0EB;
@@ -32,22 +49,24 @@ body {
 
 .forgot {
     width: 380px;
-    height: 530px;
+    max-height: 530px;
     padding: 1.2rem;
     background: #fff;
     border: 1px solid #DFE0EB;
     border-radius: 8px;
-    /* transition: none; */
 }
 
 .reset {
     width: 380px;
-    height: 580px;
+    max-height: 600px;
     padding: 1.2rem;
     background: #fff;
     border: 1px solid #DFE0EB;
     border-radius: 8px;
+    transition: none;
 }
+
+/* layout end form */
 
 ::placeholder {
     /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -67,6 +86,13 @@ body {
     font-size: 14px;
 }
 
+/* start input type text */
+.register input[type=text]:focus {
+    border: 2px solid var(--hover);
+    box-shadow: 0 0 2px var(--hover);
+    outline: none;
+}
+
 .login input[type=text]:focus {
     border: 2px solid var(--hover);
     box-shadow: 0 0 2px var(--hover);
@@ -80,6 +106,15 @@ body {
 }
 
 .reset input[type=text]:focus {
+    border: 2px solid var(--hover);
+    box-shadow: 0 0 2px var(--hover);
+    outline: none;
+}
+
+/* end input type text */
+
+/* start input type password */
+.register input[type=password]:focus {
     border: 2px solid var(--hover);
     box-shadow: 0 0 2px var(--hover);
     outline: none;
@@ -103,6 +138,15 @@ body {
     outline: none;
 }
 
+/* end input type password */
+
+/* Start button */
+.register button[type=submit]:focus {
+    border: 2px solid var(--hover);
+    box-shadow: 0 0 2px var(--hover);
+    outline: none;
+}
+
 .login button[type=submit]:focus {
     border: 2px solid var(--hover);
     box-shadow: 0 0 2px var(--hover);
@@ -119,6 +163,17 @@ body {
     border: 2px solid var(--hover);
     box-shadow: 0 0 2px var(--hover);
     outline: none;
+}
+
+/* End button */
+
+/* start img */
+.register img {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -0.5rem;
+    margin-bottom: -2rem;
 }
 
 .login img {
@@ -143,6 +198,16 @@ body {
     margin-bottom: -2rem;
 }
 
+/* end img */
+
+/* start h2 */
+.register h2 {
+    text-align: center;
+    margin-bottom: -0.5rem;
+    font-size: 24px;
+    font-weight: bold;
+}
+
 .login h2 {
     text-align: center;
     margin-bottom: -0.5rem;
@@ -162,6 +227,23 @@ body {
     margin-bottom: -0.5rem;
     font-size: 24px;
     font-weight: bold;
+}
+
+/* end h2 */
+
+/* start p */
+.register p {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 280px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #9FA2B4;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .login p {
@@ -206,6 +288,19 @@ body {
     font-weight: 400;
 }
 
+/* end p */
+
+/* start input */
+.register input {
+    display: block;
+    background-color: #FCFDFE;
+    border: 2px solid #F0F1F7;
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 8px;
+}
+
 .login input {
     display: block;
     background-color: #FCFDFE;
@@ -236,6 +331,17 @@ body {
     border-radius: 8px;
 }
 
+/* end input */
+
+/* start label */
+.register label {
+    color: #9FA2B4;
+    font-size: 12px;
+    padding: 10px;
+    margin-right: 150px;
+    margin-bottom: 5rem;
+}
+
 .login label {
     color: #9FA2B4;
     font-size: 12px;
@@ -258,6 +364,9 @@ body {
     margin-right: 150px;
 }
 
+/* end label */
+
+/* start a href */
 .login a {
     display: inline-block;
     color: #9FA2B4;
@@ -290,12 +399,20 @@ body {
     transition: all 0.5s;
 }
 
-/* .reset .btn-login-reset {
-    display: inline-block;
-    color: #9FA2B4;
-    font-size: 14px;
+/* end a href */
+
+/* start btn cancel */
+.register .btn-cancel a {
     text-decoration: none;
-} */
+    font-size: 12px;
+    color: #9FA2B4;
+}
+
+.login .btn-cancel a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #9FA2B4;
+}
 
 .forgot .btn-cancel a {
     text-decoration: none;
@@ -309,13 +426,23 @@ body {
     color: #9FA2B4;
 }
 
+/* end btn cancel */
+
+/* start btn a */
 .reset .btn-login-reset a {
     text-decoration: none;
     font-size: 14px;
     color: #fff;
 }
 
+/* end btn a */
+
+/* start hover href */
 .login a:hover {
+    color: var(--hover);
+}
+
+.register .btn-cancel a:hover {
     color: var(--hover);
 }
 
@@ -323,9 +450,24 @@ body {
     color: var(--hover);
 }
 
-/* .reset .btn-cancel a:hover {
-    color: var(--hover);
-} */
+/* end hover href */
+
+/* start button */
+.register button {
+    background: var(--hover);
+    padding: 15px;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px;
+    width: 95%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 
 .login button {
     background: var(--hover);
@@ -391,6 +533,22 @@ body {
     cursor: pointer;
 }
 
+.register .btn-cancel {
+    background: transparent;
+    padding: 15px;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 2px;
+    width: 95%;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
 .login .btn-cancel {
     background: transparent;
     padding: 15px;
@@ -439,6 +597,15 @@ body {
     cursor: pointer;
 }
 
+/* end button */
+
+/* start hover button */
+.register button:hover {
+    color: #fff;
+    background-color: var(--hover);
+    box-shadow: 0 0 20px var(--hover);
+}
+
 .login button:hover {
     color: #fff;
     background-color: var(--hover);
@@ -463,7 +630,8 @@ body {
     box-shadow: 0 0 20px var(--hover);
 }
 
-.alert.danger{
+/* start alert */
+.alert.danger {
     background: #F2DEDE;
     color: #A94442;
     padding: 10px;
@@ -474,6 +642,7 @@ body {
     margin-bottom: 15px;
     transition: all 5.0s;
 }
+
 .alert.success {
     background-color: #D4EDDA;
     color: #40754C;
@@ -485,6 +654,7 @@ body {
     margin-bottom: 15px;
     transition: all 5.0s;
 }
+
 .alert.danger .danger {
     display: flex;
     justify-content: center;
@@ -494,6 +664,7 @@ body {
     margin-bottom: auto;
     transition: all 5.0s;
 }
+
 .alert.success .success {
     display: flex;
     justify-content: center;
@@ -512,11 +683,22 @@ body {
     border-radius: 5px;
     margin: -10px auto;
 }
+
 .error {
     background: #F2DEDE;
     color: #A94442;
     padding: 10px;
-    /* width: 95%; */
+    width: 95%;
     border-radius: 5px;
     margin: -10px auto;
 }
+
+.errorlinkvalid {
+    background: #F2DEDE;
+    color: #A94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+    margin: -10px auto;
+}
+/* end alert */
