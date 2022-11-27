@@ -186,6 +186,24 @@ class Auth extends Database
         echo $idProduk;
     }
 
+    public function idPesananIncrement()
+    {
+        $sql = "SELECT max(id_pesanan) as maxKode FROM pesanan";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $inc = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        $idPesanan = $inc['maxKode'];
+
+        $noUrut = (int) substr($idPesanan, 8, 3);
+        $noUrut++;
+
+        $character = 'TP220921';
+        $idPesanan = $character . sprintf("%03s", $noUrut);
+
+        echo $idPesanan;
+    }
+
     public function bulan($bulan)
     {
         switch ($bulan) {
