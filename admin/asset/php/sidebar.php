@@ -18,7 +18,7 @@ require_once '../asset/php/session.php';
     ?>
     <title><?= $tittle ?> | TOSEPATU - Anda Untung Kami Berkah</title>
     <!-- Icon -->
-    <link rel='shortcut icon' href='../asset/img/icon-tab.jpg'>
+    <link rel='shortcut icon' href='../../../home/assets/img/icon-tab.jpg'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../asset/css/page.css">
     <!-- <link rel="stylesheet" href="../asset/css/pop-up.css"> -->
@@ -32,7 +32,7 @@ require_once '../asset/php/session.php';
 <body>
     <section id="menu">
         <div class="logo">
-            <img src="../asset/img/Logo_ToSepatu_no_bg.png" alt="Logo tosepatu">
+            <img src="../../../home/assets/img/Logo_ToSepatu_no_bg.png" alt="Logo tosepatu">
             <h2>TOSEPATU.KC</h2>
         </div>
         <div class="item">
@@ -75,7 +75,7 @@ require_once '../asset/php/session.php';
                 </h4>
                 <div class="dropdown" style="float:right">
                     <button class="dropbtn">
-                        <img class="photo" src="../asset/img/icon-tab.jpg" alt="Foto Profile">
+                        <img class="photo" src="../../../home/assets/img/icon-tab.jpg" alt="Foto Profile">
                     </button>
                     <div class="dropdown-content">
                         <a href="pengaturan.php"><i class="fa-solid fa-gear"></i>&nbsp;Pengaturan</a>
