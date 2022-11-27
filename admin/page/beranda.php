@@ -96,7 +96,7 @@ $count = new Auth();
                         <div id="alert"></div>
                         <div class="form-produk">
                             <form action="#" method="post" id="add-produk-form">
-                                <input type="text" name="id-produk" disabled value="<?= $count->idProdukIncrement(); ?>">
+                                <input type="text" name="id-produk" disabled value="<?= $count->idPesananIncrement(); ?>">
                                 <input type="text" name="nama-produk" placeholder="Masukkan Nama Produk">
                                 <input type="text" name="harga-produk" placeholder="Masukkan Harga Produk">
                                 <br>
@@ -232,11 +232,11 @@ $count = new Auth();
                     data: $("#add-produk-btn").serialize() + '$action=tambahproduk',
                     success: function(response) {
                         console.log(response);
-                        if (response === 'tambahproduk') {
-                            $("#alert").html(response);
-                        } else {
-                            $("#aAlert").html(response);
-                        }
+                        // if (response === 'tambahproduk') {
+                        //     $("#alert").html(response);
+                        // } else {
+                        //     $("#aAlert").html(response);
+                        // }
                     }
                 });
             }
